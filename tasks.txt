@@ -1,0 +1,20 @@
+Notes taking application
+
+Features:
+    - Text editor, images, link, code etc.
+    - Mindmap**
+    - tags for each note
+    - search for each note
+    - category
+
+Tech Stack:
+    - electron JS
+    - React (After basic one is done)
+    - editorJS
+    - database (json) / folder structure
+
+Design:
+    - Text Editor area
+    - search bar on left top
+    - left panel showing categories and notes inside it
+    - adding tags

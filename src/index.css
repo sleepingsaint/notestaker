@@ -1,0 +1,36 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* margin: auto;
+  max-width: 38rem;
+  padding: 2rem; */
+  padding: 0;
+  margin: 0;
+  background-color: rebeccapurple;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "search editor-actions"
+    "previous-notes editor";
+    height: 100vh;
+}
+
+.search { grid-area: search;}
+
+.previous-notes { grid-area: previous-notes; }
+
+.editor { 
+  grid-area: editor; 
+  background-color: white; 
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 5px 5px;
+}
+
+.editor-actions { grid-area: editor-actions; }
+

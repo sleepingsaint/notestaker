@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="./editor/editor.js"></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="search">
+        <button id="save-btn">Save</button>
+        <button id="load-btn">Load</button>
+      </div>
+      <div class="previous-notes"></div>
+      <div class="editor" id="editor"></div>
+      <div class="editor-actions"></div>
+    </div>
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  
+  <title>Hello, world!</title>
+  <script src="./editor/editor.js" defer></script>
+  <style>
+    body{
+      background-color: #eeeeee;
+    }
+    .grid-container {
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 0.4fr 1.6fr;
+      grid-template-rows: 0.14fr 1.8fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "notes actions"
+        "notes editor";
+    }
+
+    .editor {
+      grid-area: editor;
+      background-color: #ffffff;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 20px;
+      padding-top: 50px;
+    }
+
+    .actions {
+      grid-area: actions;
+    }
+
+    .actions button {
+      height: 50%;
+    }
+
+    .search {
+      grid-area: search;
+    }
+
+    .search-bar {
+      width: 100%;
+    }
+
+    .notes {
+      grid-area: notes;
+      overflow-y: scroll;
+    }
+
+    .notes::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="editor" id="editor"></div>
+    <div class="actions d-flex justify-content-between align-items-center">
+      <div><input type="text" class="form-control form-control-lg" placeholder="untitled" id="title"></div>
+      <div class="mr-sm-3">
+        <button type="button" class="btn btn-primary mr-2" id="save-btn">Save</button>
+        <button type="button" class="btn btn-secondary" id="load-btn">Load</button>
+        <button type="button" class="btn btn-warning" id="clear-btn">Clear</button>
+      </div>
+    </div>
+    <div class="notes d-flex flex-column px-3 my-3">
+      <!-- <input type="text" class="search-bar sticky-top form-control form-control-lg mb-3" placeholder="search"> -->
+      <h3>Recent Notes</h3>
+      <hr />
+      <div id="recent-notes"></div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
